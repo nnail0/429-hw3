@@ -20,12 +20,12 @@ from tensorflow.keras.datasets import mnist, fashion_mnist
 (X_train, Y_train), (X_test, Y_test) = mnist.load_data()
 (X_train_f, Y_train_f), (X_test_f, Y_test_f) = fashion_mnist.load_data()
 #flatten all data
-X_train = X_train.reshape(X_train.shape[0] -1)
+X_train = X_train.reshape(X_train.shape[0], -1)
 X_test = X_test.reshape(X_test.shape[0], -1)
 Y_train = Y_train.reshape(Y_train.shape[0], -1)
 Y_test = Y_test.reshape(Y_test.shape[0], -1)
 
-X_train_f = X_train_f.reshape(X_train_f.shape[0] -1)
+X_train_f = X_train_f.reshape(X_train_f.shape[0], -1)
 X_test_f = X_test_f.reshape(X_test_f.shape[0], -1)
 Y_train_f = Y_train_f.reshape(Y_train_f.shape[0], -1)
 Y_test_f = Y_test_f.reshape(Y_test_f.shape[0], -1)
