@@ -79,28 +79,18 @@ lda = LinearDiscriminantAnalysis()
 # %%
 from sklearn.svm import SVC
 from sklearn import metrics
-from sklearn.model_selection import GridSearchCV
-import time 
-import itertools
+from sklearn.pipeline import Pipeline
+import time
 
-grid = {
-'C' : [0.001, 0.01, 0.1, 1, 10, 100]
-}
 
-iters = 1000
+test_pipe = Pipeline([("scaler", sc), ("dim_red", pca_50), ("model", SVC(C = 0.01, kernel='linear', max_iter=1000))], verbose= True)
+start_time = time.time()
+test_pipe.fit(X = train_X, y = train_y)
+time_taken = time.time() - start_time
 
-train_X = sc.fit_transform(train_X)
-test_X = sc.fit_transform(test_X)
 
-pca = PCA(n_components= 50)
-train_X = PCA.fit_transform(pca, X = train_X)
-test_X = PCA.transform(pca, X = test_X)
-
-gs = GridSearchCV(SVC(), grid, cv = 5, n_jobs= -1)
-gs.fit(X = train_X, y= train_y)
-
-print(gs.best_params_)
-
+print("score: ", test_pipe.score(test_X, test_y))
+print("time: ", time_taken)
 
 # In this block, we will need to test each combo. 
 # Check the discord for helpful info from other people that have done similar stuff in the past. 
