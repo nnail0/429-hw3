@@ -1,0 +1,33 @@
+dim_red,kernal,num_iter,cs,gammas,degs,train_scores,test_scores,pipes,times
+PCA(n_components=200),rbf,3000,2.0,0.0005,1,0.8995833333333333,0.876,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('dim_red', PCA(n_components=200)),
+                ('model', SVC(C=2, gamma=0.0005, max_iter=3000))],
+         verbose=True)",130.51734709739685
+PCA(n_components=200),rbf,3000,2.0,0.005,1,0.97615,0.8863,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('dim_red', PCA(n_components=200)),
+                ('model', SVC(C=2, gamma=0.005, max_iter=3000))],
+         verbose=True)",248.99798488616943
+PCA(n_components=200),rbf,3000,1.5,0.005,2,0.9688333333333333,0.8856,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('dim_red', PCA(n_components=200)),
+                ('model', SVC(C=1.5, gamma=0.005, max_iter=3000))],
+         verbose=True)",250.05262994766235
+PCA(n_components=200),rbf,3000,1.5,0.001,2,0.9132166666666667,0.8842,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('dim_red', PCA(n_components=200)),
+                ('model', SVC(C=1.5, gamma=0.001, max_iter=3000))],
+         verbose=True)",137.09433317184448
+LinearDiscriminantAnalysis(),rbf,3000,2.0,0.0005,1,0.8420333333333333,0.8239,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('dim_red', LinearDiscriminantAnalysis()),
+                ('model', SVC(C=2, gamma=0.0005, max_iter=3000))],
+         verbose=True)",31.635915994644165
+LinearDiscriminantAnalysis(),rbf,3000,2.0,0.005,1,0.8474833333333334,0.8285,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('dim_red', LinearDiscriminantAnalysis()),
+                ('model', SVC(C=2, gamma=0.005, max_iter=3000))],
+         verbose=True)",33.196962118148804
+LinearDiscriminantAnalysis(),rbf,3000,1.5,0.005,2,0.847,0.8286,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('dim_red', LinearDiscriminantAnalysis()),
+                ('model', SVC(C=1.5, gamma=0.005, max_iter=3000))],
+         verbose=True)",29.92428994178772
+LinearDiscriminantAnalysis(),rbf,3000,1.5,0.001,2,0.8430666666666666,0.8249,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('dim_red', LinearDiscriminantAnalysis()),
+                ('model', SVC(C=1.5, gamma=0.001, max_iter=3000))],
+         verbose=True)",31.886051893234253
