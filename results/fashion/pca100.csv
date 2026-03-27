@@ -8115,3 +8115,33 @@ PCA(n_components=100),rbf,3000,1.5,0.001,2,0.9017666666666667,0.879,"Pipeline(st
                 ('dim_red', PCA(n_components=100)),
                 ('model', SVC(C=1.5, gamma=0.001, max_iter=3000))],
          verbose=True)",69.65368604660034
+PCA(n_components=100),poly,3000,2.0,scale,1,0.8604333333333334,0.8427,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('dim_red', PCA(n_components=100)),
+                ('model', SVC(C=2, degree=1, kernel='poly', max_iter=3000))],
+         verbose=True)",69.2513599395752
+PCA(n_components=100),poly,3000,2.0,0.005,1,0.8518833333333333,0.8306,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('dim_red', PCA(n_components=100)),
+                ('model',
+                 SVC(C=2, degree=1, gamma=0.005, kernel='poly',
+                     max_iter=3000))],
+         verbose=True)",61.90635800361633
+PCA(n_components=100),poly,3000,4.0,0.1,2,0.7739166666666667,0.737,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('dim_red', PCA(n_components=100)),
+                ('model',
+                 SVC(C=4, degree=2, gamma=0.1, kernel='poly', max_iter=3000))],
+         verbose=True)",51.73684597015381
+PCA(n_components=100),poly,3000,5.0,0.01,2,0.8255833333333333,0.7854,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('dim_red', PCA(n_components=100)),
+                ('model',
+                 SVC(C=5, degree=2, gamma=0.01, kernel='poly', max_iter=3000))],
+         verbose=True)",52.663387060165405
+PCA(n_components=100),poly,3000,0.5,0.001,3,0.7248333333333333,0.7113,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('dim_red', PCA(n_components=100)),
+                ('model',
+                 SVC(C=0.5, gamma=0.001, kernel='poly', max_iter=3000))],
+         verbose=True)",127.51829981803894
+PCA(n_components=100),poly,3000,1.0,0.0005,3,0.6348,0.6287,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('dim_red', PCA(n_components=100)),
+                ('model',
+                 SVC(C=1, gamma=0.0005, kernel='poly', max_iter=3000))],
+         verbose=True)",194.51635003089905

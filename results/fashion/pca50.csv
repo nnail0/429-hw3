@@ -6290,3 +6290,27 @@ PCA(n_components=50),rbf,3000,1.5,0.005,2,0.9306166666666666,0.8783,"Pipeline(st
 PCA(n_components=50),rbf,3000,1.5,0.001,2,0.88545,0.8655,"Pipeline(steps=[('scaler', StandardScaler()), ('dim_red', PCA(n_components=50)),
                 ('model', SVC(C=1.5, gamma=0.001, max_iter=3000))],
          verbose=True)",40.306402921676636
+PCA(n_components=50),poly,3000,2.0,scale,1,0.8440166666666666,0.83,"Pipeline(steps=[('scaler', StandardScaler()), ('dim_red', PCA(n_components=50)),
+                ('model', SVC(C=2, degree=1, kernel='poly', max_iter=3000))],
+         verbose=True)",38.041558027267456
+PCA(n_components=50),poly,3000,2.0,0.005,1,0.8378666666666666,0.8214,"Pipeline(steps=[('scaler', StandardScaler()), ('dim_red', PCA(n_components=50)),
+                ('model',
+                 SVC(C=2, degree=1, gamma=0.005, kernel='poly',
+                     max_iter=3000))],
+         verbose=True)",37.54611897468567
+PCA(n_components=50),poly,3000,4.0,0.1,2,0.6898166666666666,0.6582,"Pipeline(steps=[('scaler', StandardScaler()), ('dim_red', PCA(n_components=50)),
+                ('model',
+                 SVC(C=4, degree=2, gamma=0.1, kernel='poly', max_iter=3000))],
+         verbose=True)",30.192038774490356
+PCA(n_components=50),poly,3000,5.0,0.01,2,0.73025,0.7024,"Pipeline(steps=[('scaler', StandardScaler()), ('dim_red', PCA(n_components=50)),
+                ('model',
+                 SVC(C=5, degree=2, gamma=0.01, kernel='poly', max_iter=3000))],
+         verbose=True)",31.48427963256836
+PCA(n_components=50),poly,3000,0.5,0.001,3,0.6932666666666667,0.6849,"Pipeline(steps=[('scaler', StandardScaler()), ('dim_red', PCA(n_components=50)),
+                ('model',
+                 SVC(C=0.5, gamma=0.001, kernel='poly', max_iter=3000))],
+         verbose=True)",63.7735710144043
+PCA(n_components=50),poly,3000,1.0,0.0005,3,0.6280666666666667,0.625,"Pipeline(steps=[('scaler', StandardScaler()), ('dim_red', PCA(n_components=50)),
+                ('model',
+                 SVC(C=1, gamma=0.0005, kernel='poly', max_iter=3000))],
+         verbose=True)",90.88687109947205
