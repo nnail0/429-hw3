@@ -106,7 +106,7 @@ class SVCPipelineTrainer(object):
         return pipe
                 
     
-    def svc_train(self,dim_red, kern, sc,fp, shuffle=True):
+    def svc_train(self,dim_red, kern, sc,fp, shuffle=False):
         '''
         params: dim_red - type of dimension reduction
                 kern - kernal 

@@ -72,12 +72,13 @@ fashion_trainer = SVCPipelineTrainer(folder_name='fashion',
 
 '''#4'''
 all_kernals = [50,100,200]
+best_dims = 
 best_cs = [0.1, 2.0, 0.1]
 best_gammas = [0, 0.005, 0.01]
 best_degrees = [0, 0, 2]
 
 mnist_data = [X_train, Y_train, X_test, Y_test]
-mnist_trainer = SVCPipelineTrainer(kerns=KERNALS,
+mnist_trainer = SVCPipelineTrainer(kerns=all_kernals,
                                    folder_name='mnist', 
                                    pca_comps=PCA_DIMS, 
                                    num_iter=ITERATIONS, 
