@@ -360,3 +360,15 @@ PCA(n_components=100),rbf,3000,2.0,0.005,2,0.9970833333333333,0.97,"Pipeline(ste
                 ('dim_red', PCA(n_components=100)),
                 ('model', SVC(C=2.0, gamma=0.005, max_iter=3000))],
          verbose=True)",107.4124448299408
+PCA(n_components=100),rbf,1000,2.0,0.005,2,0.9968833333333333,0.9696,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('dim_red', PCA(n_components=100)),
+                ('model', SVC(C=2.0, gamma=0.005, max_iter=1000))],
+         verbose=True)",96.3034119606018
+PCA(n_components=100),rbf,3000,2.0,0.005,2,0.9970833333333333,0.97,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('dim_red', PCA(n_components=100)),
+                ('model', SVC(C=2.0, gamma=0.005, max_iter=3000))],
+         verbose=True)",107.4124448299408
+PCA(n_components=100),rbf,8000,2.0,0.005,2,0.9971,0.9698,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('dim_red', PCA(n_components=100)),
+                ('model', SVC(C=2.0, gamma=0.005, max_iter=8000))],
+         verbose=True)",125.85612964630127
