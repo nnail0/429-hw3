@@ -26,45 +26,33 @@ class SVCPipelineTrainer(object):
     '''
     def __init__(self, kerns, num_iter, pca_comps,
                  folder_name, data, fpaths, 
-                 cs, gammas, degees):
+                 cs, gammas, degrees, bootstrap):
         self.kerns = kerns
         self.num_iter = num_iter
         self.pca_comps = pca_comps
         self.folder_name = folder_name
         self.fpaths = fpaths
         self.data = data
+        self.cs_ = cs
+        self.gammas_= gammas
+        self.bootstrap = bootstrap
+        self.degrees_ = degrees
         
         self.pipes = []
         self.rand_gen = np.random.RandomState()
         
-        self.all_results = {"dataset" : [],
-                            "scaler"  : [],
-                            "dim_obj" : [],
-                            "results" : []
-                           }
+        self.all_results = []
         
     
     def save_n_print_results(self,results, file_path):
+        if self.bootstrap:
+            file_path = f"./results/bootstrap/{self.folder_name}.csv"
         os.makedirs(os.path.dirname(file_path), exist_ok=True)
         if isinstance(results, dict):
             results = [results]  
         df = pd.concat([pd.DataFrame(r) for r in results if r is not None], ignore_index=True)
         df.to_csv(file_path, mode='a', header=not os.path.exists(file_path), index=False)
         print(df.to_string(index=False))
-    '''
-    def plot_t_vs_acc(times, scores, num_iter):
-        
-        Params : times (1D float array) - time cost
-                 scores (1D float array) - accuracy 
-        Makes simple plot.
-        Returns : 
-        
-        xs = np.array(times)
-        ys = np.array(scores)
-    
-        plt.plot(xs, ys)
-        return plt
-     '''   
     
     def fit_get_time(self,pipe, x_train, y_train):
         '''
@@ -154,7 +142,7 @@ class SVCPipelineTrainer(object):
     
 
     
-        print(f"Starting svc_train({str(dim_red)}{kern}{iterations})")
+        print(f"Starting svc_train({str(dim_red)}{kern}{self.num_iter})")
         #shuffle each of the global hyperparameter arrays to save time
         #instead of GridSearch
         if shuffle:
@@ -188,11 +176,12 @@ class SVCPipelineTrainer(object):
                     pipe = self.make_pipe_(sc=sc, dim_red=dim_red, kern=kern, num_iter=iteration,
                                       c=c, gam=gam, deg=deg)
     
-                fit_pipe, time_ = fit_get_time(pipe, x_train, y_train)
+                fit_pipe, time_ = self.fit_get_time(pipe, x_train, y_train)
     
                 train_score =  fit_pipe.score(x_train, y_train)
                 test_score =  fit_pipe.score(x_test, y_test)
                 
+                self.pipes.append(fit_pipe)
     
                 results['dim_red'].append(str(dim_red))
                 results['kernal'].append(kern)
@@ -200,7 +189,6 @@ class SVCPipelineTrainer(object):
                 results['cs'].append(c)
                 results['gammas'].append(gam)
                 results['degs'].append(deg)
-                results['pipes'].append(pipe)
                 results['train_scores'].append(train_score)
                 results['test_scores'].append(test_score)
                 results['times'].append(time_)
@@ -209,7 +197,7 @@ class SVCPipelineTrainer(object):
                 print(f"dim_red={str(dim_red)} | num_iter={iteration} | kernal={kern} | C={c} | gamma={gam} | degree={deg} | time={time_} | train_score= {train_score} | test_score= {test_score}")
                 print("---------------------------------------- Complete! ----------------------------------------\n\n")
             
-            save_n_print_results(self.results, fp)    
+            self.save_n_print_results(results, fp)    
         
         return results
     
@@ -230,6 +218,7 @@ class SVCPipelineTrainer(object):
                 pca =  PCA(n_components=p)
                 sc = StandardScaler()
                 
+                results = {}
                 if p==50:
                     results = self.svc_train(dim_red=pca,
                                             sc=sc,
@@ -247,26 +236,27 @@ class SVCPipelineTrainer(object):
                                             fp=self.fpaths[f'{self.folder_name}']['pca200'])
                     
                 pca_lda_results.append(results)
+                self.all_results.append(results)
                 #self.pipes.extend(results['pipes'])
                 
-            # run LDA once for every 3xPCA
-            sc = StandardScaler()
-            lda = LinearDiscriminantAnalysis()
-            lda_results = self.svc_train(dim_red=lda,
-                                    sc=sc,
-                                    kern=k,
-                                    fp=self.fpaths[f'{self.folder_name}']['lda'])
-            
+            if not self.bootstrap:
+                sc = StandardScaler()
+                lda = LinearDiscriminantAnalysis()
+                lda_results = self.svc_train(dim_red=lda,
+                                        sc=sc,
+                                        kern=k,
+                                        fp=self.fpaths[f'{self.folder_name}']['lda'])
             #self.pipes.extend(lda_results['pipes'])
-            pca_lda_results.append(lda_results)
+            #pca_lda_results.append(lda_results)
+            
             
             if k=='linear': self.save_n_print_results(pca_lda_results,   #save linear
-                                 fpaths[f'{self.folder_name}']['linear'])
+                                 self.fpaths[f'{self.folder_name}']['linear'])
             elif k=='rbf': self.save_n_print_results(pca_lda_results,    #save rbf
-                                 fpaths[f'{self.folder_name}']['rbf'])
+                                 self.fpaths[f'{self.folder_name}']['rbf'])
             elif k=='poly': self.save_n_print_results(pca_lda_results,   #save poly
-                                 fpaths[f'{self.folder_name}']['poly'])
-        return pca_lda_results
+                                 self.fpaths[f'{self.folder_name}']['poly'])
+        return self.all_results
         
         
         
