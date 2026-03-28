@@ -1,0 +1,297 @@
+dim_red,kernal,num_iter,cs,gammas,degs,train_scores,test_scores,pipes,times
+LinearDiscriminantAnalysis(),linear,3000,0.1,0.01,2,0.89735,0.8929,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('dim_red', LinearDiscriminantAnalysis()),
+                ('model', SVC(C=0.1, kernel='linear', max_iter=3000))],
+         verbose=True)",30.87410306930542
+LinearDiscriminantAnalysis(),linear,3000,2.0,scale,3,0.8556833333333334,0.8526,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('dim_red', LinearDiscriminantAnalysis()),
+                ('model', SVC(C=2, kernel='linear', max_iter=3000))],
+         verbose=True)",32.800387144088745
+LinearDiscriminantAnalysis(),linear,3000,1.0,0.0005,4,0.8851333333333333,0.8798,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('dim_red', LinearDiscriminantAnalysis()),
+                ('model', SVC(C=1, kernel='linear', max_iter=3000))],
+         verbose=True)",32.21936893463135
+LinearDiscriminantAnalysis(),linear,3000,4.0,0.001,2,0.7757166666666667,0.7614,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('dim_red', LinearDiscriminantAnalysis()),
+                ('model', SVC(C=4, kernel='linear', max_iter=3000))],
+         verbose=True)",34.16150903701782
+LinearDiscriminantAnalysis(),linear,3000,0.1,0.01,2,0.89735,0.8929,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('dim_red', LinearDiscriminantAnalysis()),
+                ('model', SVC(C=0.1, kernel='linear', max_iter=3000))],
+         verbose=True)",30.754207849502563
+LinearDiscriminantAnalysis(),linear,3000,0.5,0.005,3,0.8954166666666666,0.8926,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('dim_red', LinearDiscriminantAnalysis()),
+                ('model', SVC(C=0.5, kernel='linear', max_iter=3000))],
+         verbose=True)",31.441806077957153
+LinearDiscriminantAnalysis(),rbf,3000,1.0,0.001,3,0.8961,0.8915,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('dim_red', LinearDiscriminantAnalysis()),
+                ('model', SVC(C=1, gamma=0.001, max_iter=3000))],
+         verbose=True)",20.50849413871765
+LinearDiscriminantAnalysis(),rbf,3000,0.5,0.0005,3,0.8908333333333334,0.8897,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('dim_red', LinearDiscriminantAnalysis()),
+                ('model', SVC(C=0.5, gamma=0.0005, max_iter=3000))],
+         verbose=True)",25.046951055526733
+LinearDiscriminantAnalysis(),rbf,3000,0.1,0.01,2,0.8996666666666666,0.8954,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('dim_red', LinearDiscriminantAnalysis()),
+                ('model', SVC(C=0.1, gamma=0.01, max_iter=3000))],
+         verbose=True)",20.684810876846313
+LinearDiscriminantAnalysis(),rbf,3000,0.1,0.01,2,0.8996666666666666,0.8954,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('dim_red', LinearDiscriminantAnalysis()),
+                ('model', SVC(C=0.1, gamma=0.01, max_iter=3000))],
+         verbose=True)",21.038197994232178
+LinearDiscriminantAnalysis(),rbf,3000,2.0,scale,4,0.92995,0.923,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('dim_red', LinearDiscriminantAnalysis()),
+                ('model', SVC(C=2, max_iter=3000))],
+         verbose=True)",16.131999969482422
+LinearDiscriminantAnalysis(),rbf,3000,4.0,0.005,2,0.9119666666666667,0.9054,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('dim_red', LinearDiscriminantAnalysis()),
+                ('model', SVC(C=4, gamma=0.005, max_iter=3000))],
+         verbose=True)",17.047276258468628
+LinearDiscriminantAnalysis(),poly,3000,0.1,scale,2,0.8772666666666666,0.8697,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('dim_red', LinearDiscriminantAnalysis()),
+                ('model', SVC(C=0.1, degree=2, kernel='poly', max_iter=3000))],
+         verbose=True)",22.67745089530945
+LinearDiscriminantAnalysis(),poly,3000,0.1,0.01,2,0.8278666666666666,0.8296,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('dim_red', LinearDiscriminantAnalysis()),
+                ('model',
+                 SVC(C=0.1, degree=2, gamma=0.01, kernel='poly',
+                     max_iter=3000))],
+         verbose=True)",35.3874397277832
+LinearDiscriminantAnalysis(),poly,3000,2.0,0.0005,4,0.39098333333333335,0.3918,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('dim_red', LinearDiscriminantAnalysis()),
+                ('model',
+                 SVC(C=2, degree=4, gamma=0.0005, kernel='poly',
+                     max_iter=3000))],
+         verbose=True)",48.56710982322693
+LinearDiscriminantAnalysis(),poly,3000,1.0,0.005,3,0.5929666666666666,0.5932,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('dim_red', LinearDiscriminantAnalysis()),
+                ('model', SVC(C=1, gamma=0.005, kernel='poly', max_iter=3000))],
+         verbose=True)",45.66280198097229
+LinearDiscriminantAnalysis(),poly,3000,4.0,0.001,3,0.4341,0.4332,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('dim_red', LinearDiscriminantAnalysis()),
+                ('model', SVC(C=4, gamma=0.001, kernel='poly', max_iter=3000))],
+         verbose=True)",48.64212608337402
+LinearDiscriminantAnalysis(),poly,3000,0.5,0.01,2,0.8663833333333333,0.8628,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('dim_red', LinearDiscriminantAnalysis()),
+                ('model',
+                 SVC(C=0.5, degree=2, gamma=0.01, kernel='poly',
+                     max_iter=3000))],
+         verbose=True)",26.26670217514038
+LinearDiscriminantAnalysis(),poly,3000,2,0.0001,2,0.5185632653061224,0.5193142857142857,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('dim_red', LinearDiscriminantAnalysis()),
+                ('model',
+                 SVC(C=2, degree=2, gamma=0.0001, kernel='poly',
+                     max_iter=3000))],
+         verbose=True)",50.7788200378418
+LinearDiscriminantAnalysis(),poly,3000,20,0.005,3,0.8795102040816326,0.8764571428571428,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('dim_red', LinearDiscriminantAnalysis()),
+                ('model',
+                 SVC(C=20, gamma=0.005, kernel='poly', max_iter=3000))],
+         verbose=True)",28.02370524406433
+LinearDiscriminantAnalysis(),poly,3000,10,0.001,3,0.47231020408163266,0.47131428571428574,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('dim_red', LinearDiscriminantAnalysis()),
+                ('model',
+                 SVC(C=10, gamma=0.001, kernel='poly', max_iter=3000))],
+         verbose=True)",48.4811692237854
+LinearDiscriminantAnalysis(),poly,3000,5,scale,4,0.9062530612244898,0.8867428571428572,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('dim_red', LinearDiscriminantAnalysis()),
+                ('model', SVC(C=5, degree=4, kernel='poly', max_iter=3000))],
+         verbose=True)",21.370426177978516
+LinearDiscriminantAnalysis(),poly,3000,2,0.0005,2,0.5542367346938776,0.552,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('dim_red', LinearDiscriminantAnalysis()),
+                ('model',
+                 SVC(C=2, degree=2, gamma=0.0005, kernel='poly',
+                     max_iter=3000))],
+         verbose=True)",48.532691955566406
+LinearDiscriminantAnalysis(),poly,3000,4,0.005,2,0.8744,0.8657142857142858,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('dim_red', LinearDiscriminantAnalysis()),
+                ('model',
+                 SVC(C=4, degree=2, gamma=0.005, kernel='poly',
+                     max_iter=3000))],
+         verbose=True)",24.60189986228943
+LinearDiscriminantAnalysis(),poly,3000,10,scale,4,0.9117387755102041,0.8910857142857143,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('dim_red', LinearDiscriminantAnalysis()),
+                ('model', SVC(C=10, degree=4, kernel='poly', max_iter=3000))],
+         verbose=True)",23.325956106185913
+LinearDiscriminantAnalysis(),poly,3000,2,0.005,3,0.7269224489795918,0.7190857142857143,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('dim_red', LinearDiscriminantAnalysis()),
+                ('model', SVC(C=2, gamma=0.005, kernel='poly', max_iter=3000))],
+         verbose=True)",43.29217195510864
+LinearDiscriminantAnalysis(),poly,3000,2,0.0005,2,0.5757877551020408,0.5734857142857143,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('dim_red', LinearDiscriminantAnalysis()),
+                ('model',
+                 SVC(C=2, degree=2, gamma=0.0005, kernel='poly',
+                     max_iter=3000))],
+         verbose=True)",50.26072120666504
+LinearDiscriminantAnalysis(),poly,3000,4,0.005,3,0.7706285714285714,0.7669714285714285,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('dim_red', LinearDiscriminantAnalysis()),
+                ('model', SVC(C=4, gamma=0.005, kernel='poly', max_iter=3000))],
+         verbose=True)",39.39062809944153
+LinearDiscriminantAnalysis(),poly,3000,5,0.0001,2,0.5365714285714286,0.5374857142857142,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('dim_red', LinearDiscriminantAnalysis()),
+                ('model',
+                 SVC(C=5, degree=2, gamma=0.0001, kernel='poly',
+                     max_iter=3000))],
+         verbose=True)",49.97258687019348
+LinearDiscriminantAnalysis(),poly,3000,20,0.001,2,0.8550040816326531,0.8523428571428572,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('dim_red', LinearDiscriminantAnalysis()),
+                ('model',
+                 SVC(C=20, degree=2, gamma=0.001, kernel='poly',
+                     max_iter=3000))],
+         verbose=True)",32.63306522369385
+LinearDiscriminantAnalysis(),poly,3000,5,0.0005,2,0.6349224489795918,0.6290285714285714,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('dim_red', LinearDiscriminantAnalysis()),
+                ('model',
+                 SVC(C=5, degree=2, gamma=0.0005, kernel='poly',
+                     max_iter=3000))],
+         verbose=True)",60.40817880630493
+LinearDiscriminantAnalysis(),poly,3000,10,scale,2,0.8926204081632653,0.8797714285714285,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('dim_red', LinearDiscriminantAnalysis()),
+                ('model', SVC(C=10, degree=2, kernel='poly', max_iter=3000))],
+         verbose=True)",22.761012077331543
+LinearDiscriminantAnalysis(),poly,3000,4,0.005,2,0.8740244897959184,0.8621714285714286,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('dim_red', LinearDiscriminantAnalysis()),
+                ('model',
+                 SVC(C=4, degree=2, gamma=0.005, kernel='poly',
+                     max_iter=3000))],
+         verbose=True)",27.82092523574829
+LinearDiscriminantAnalysis(),poly,3000,2,0.005,3,0.7212408163265306,0.7129142857142857,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('dim_red', LinearDiscriminantAnalysis()),
+                ('model', SVC(C=2, gamma=0.005, kernel='poly', max_iter=3000))],
+         verbose=True)",52.471184730529785
+LinearDiscriminantAnalysis(),poly,3000,2,0.0001,4,0.37183673469387757,0.3717714285714286,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('dim_red', LinearDiscriminantAnalysis()),
+                ('model',
+                 SVC(C=2, degree=4, gamma=0.0001, kernel='poly',
+                     max_iter=3000))],
+         verbose=True)",62.3608341217041
+LinearDiscriminantAnalysis(),poly,3000,20,0.001,3,0.44700408163265304,0.4425142857142857,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('dim_red', LinearDiscriminantAnalysis()),
+                ('model',
+                 SVC(C=20, gamma=0.001, kernel='poly', max_iter=3000))],
+         verbose=True)",59.38467502593994
+LinearDiscriminantAnalysis(),poly,3000,5,0.005,3,0.7889469387755103,0.7868571428571428,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('dim_red', LinearDiscriminantAnalysis()),
+                ('model', SVC(C=5, gamma=0.005, kernel='poly', max_iter=3000))],
+         verbose=True)",52.102341175079346
+LinearDiscriminantAnalysis(),poly,3000,20,0.005,2,0.8838367346938776,0.8786285714285714,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('dim_red', LinearDiscriminantAnalysis()),
+                ('model',
+                 SVC(C=20, degree=2, gamma=0.005, kernel='poly',
+                     max_iter=3000))],
+         verbose=True)",29.602860927581787
+LinearDiscriminantAnalysis(),poly,3000,10,0.001,3,0.45048163265306124,0.4510857142857143,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('dim_red', LinearDiscriminantAnalysis()),
+                ('model',
+                 SVC(C=10, gamma=0.001, kernel='poly', max_iter=3000))],
+         verbose=True)",65.06434106826782
+LinearDiscriminantAnalysis(),poly,3000,2,0.0005,4,0.37557551020408164,0.3793142857142857,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('dim_red', LinearDiscriminantAnalysis()),
+                ('model',
+                 SVC(C=2, degree=4, gamma=0.0005, kernel='poly',
+                     max_iter=3000))],
+         verbose=True)",65.22033524513245
+LinearDiscriminantAnalysis(),poly,3000,2,0.0001,2,0.5227102040816326,0.5235428571428571,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('dim_red', LinearDiscriminantAnalysis()),
+                ('model',
+                 SVC(C=2, degree=2, gamma=0.0001, kernel='poly',
+                     max_iter=3000))],
+         verbose=True)",66.47457695007324
+LinearDiscriminantAnalysis(),poly,3000,4,scale,2,0.891265306122449,0.8850285714285714,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('dim_red', LinearDiscriminantAnalysis()),
+                ('model', SVC(C=4, degree=2, kernel='poly', max_iter=3000))],
+         verbose=True)",28.05761218070984
+LinearDiscriminantAnalysis(),poly,3000,20,0.0005,3,0.43435102040816326,0.42697142857142856,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('dim_red', LinearDiscriminantAnalysis()),
+                ('model',
+                 SVC(C=20, gamma=0.0005, kernel='poly', max_iter=3000))],
+         verbose=True)",55.40835785865784
+LinearDiscriminantAnalysis(),poly,3000,4,0.0001,3,0.4337469387755102,0.4266285714285714,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('dim_red', LinearDiscriminantAnalysis()),
+                ('model',
+                 SVC(C=4, gamma=0.0001, kernel='poly', max_iter=3000))],
+         verbose=True)",48.98028016090393
+LinearDiscriminantAnalysis(),poly,3000,10,0.005,4,0.5318693877551021,0.5195428571428572,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('dim_red', LinearDiscriminantAnalysis()),
+                ('model',
+                 SVC(C=10, degree=4, gamma=0.005, kernel='poly',
+                     max_iter=3000))],
+         verbose=True)",52.07046127319336
+LinearDiscriminantAnalysis(),poly,3000,2,0.005,2,0.8653224489795919,0.8633142857142857,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('dim_red', LinearDiscriminantAnalysis()),
+                ('model',
+                 SVC(C=2, degree=2, gamma=0.005, kernel='poly',
+                     max_iter=3000))],
+         verbose=True)",26.47722816467285
+LinearDiscriminantAnalysis(),poly,3000,2,0.001,2,0.714204081632653,0.7002285714285714,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('dim_red', LinearDiscriminantAnalysis()),
+                ('model',
+                 SVC(C=2, degree=2, gamma=0.001, kernel='poly',
+                     max_iter=3000))],
+         verbose=True)",47.36889600753784
+LinearDiscriminantAnalysis(),poly,3000,5,scale,2,0.8907265306122449,0.8872,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('dim_red', LinearDiscriminantAnalysis()),
+                ('model', SVC(C=5, degree=2, kernel='poly', max_iter=3000))],
+         verbose=True)",20.996639013290405
+LinearDiscriminantAnalysis(),poly,3000,4,0.0001,2,0.5183836734693877,0.5142857142857142,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('dim_red', LinearDiscriminantAnalysis()),
+                ('model',
+                 SVC(C=4, degree=2, gamma=0.0001, kernel='poly',
+                     max_iter=3000))],
+         verbose=True)",67.47030687332153
+LinearDiscriminantAnalysis(),poly,3000,5,0.001,3,0.44096326530612245,0.44285714285714284,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('dim_red', LinearDiscriminantAnalysis()),
+                ('model', SVC(C=5, gamma=0.001, kernel='poly', max_iter=3000))],
+         verbose=True)",63.17348289489746
+LinearDiscriminantAnalysis(),poly,3000,2,scale,4,0.8934367346938775,0.8848,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('dim_red', LinearDiscriminantAnalysis()),
+                ('model', SVC(C=2, degree=4, kernel='poly', max_iter=3000))],
+         verbose=True)",30.973508834838867
+LinearDiscriminantAnalysis(),poly,3000,2,0.005,3,0.7143020408163265,0.7228571428571429,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('dim_red', LinearDiscriminantAnalysis()),
+                ('model', SVC(C=2, gamma=0.005, kernel='poly', max_iter=3000))],
+         verbose=True)",59.8251531124115
+LinearDiscriminantAnalysis(),poly,3000,20,0.0005,2,0.7766204081632653,0.7774857142857143,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('dim_red', LinearDiscriminantAnalysis()),
+                ('model',
+                 SVC(C=20, degree=2, gamma=0.0005, kernel='poly',
+                     max_iter=3000))],
+         verbose=True)",56.902719020843506
+LinearDiscriminantAnalysis(),poly,3000,10,0.005,2,0.8804408163265306,0.8741714285714286,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('dim_red', LinearDiscriminantAnalysis()),
+                ('model',
+                 SVC(C=10, degree=2, gamma=0.005, kernel='poly',
+                     max_iter=3000))],
+         verbose=True)",31.41681718826294
+LinearDiscriminantAnalysis(),poly,3000,5,0.005,2,0.8752979591836735,0.8660571428571429,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('dim_red', LinearDiscriminantAnalysis()),
+                ('model',
+                 SVC(C=5, degree=2, gamma=0.005, kernel='poly',
+                     max_iter=3000))],
+         verbose=True)",30.003824949264526
+LinearDiscriminantAnalysis(),poly,3000,2,0.0005,3,0.4478367346938775,0.4392,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('dim_red', LinearDiscriminantAnalysis()),
+                ('model',
+                 SVC(C=2, gamma=0.0005, kernel='poly', max_iter=3000))],
+         verbose=True)",54.209808349609375
+LinearDiscriminantAnalysis(),poly,3000,10,0.005,3,0.8646857142857143,0.8566857142857143,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('dim_red', LinearDiscriminantAnalysis()),
+                ('model',
+                 SVC(C=10, gamma=0.005, kernel='poly', max_iter=3000))],
+         verbose=True)",37.09412384033203
+LinearDiscriminantAnalysis(),poly,3000,20,0.001,2,0.8557551020408163,0.8457142857142858,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('dim_red', LinearDiscriminantAnalysis()),
+                ('model',
+                 SVC(C=20, degree=2, gamma=0.001, kernel='poly',
+                     max_iter=3000))],
+         verbose=True)",39.62077283859253
+LinearDiscriminantAnalysis(),poly,3000,2,0.0001,4,0.39170612244897957,0.3869714285714286,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('dim_red', LinearDiscriminantAnalysis()),
+                ('model',
+                 SVC(C=2, degree=4, gamma=0.0001, kernel='poly',
+                     max_iter=3000))],
+         verbose=True)",55.3890597820282
+LinearDiscriminantAnalysis(),poly,3000,4,scale,2,0.8918204081632654,0.8797714285714285,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('dim_red', LinearDiscriminantAnalysis()),
+                ('model', SVC(C=4, degree=2, kernel='poly', max_iter=3000))],
+         verbose=True)",25.622368812561035
