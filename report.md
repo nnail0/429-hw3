@@ -75,7 +75,7 @@ Given the shape of the input data, training mainly focused on degrees 3 through 
 
 | Dim. Reduction Used 	| Degree 	| C    	| Gamma 	| max_iter               	| Testing Score 	| Time  	|
 |---------------------	|--------	|------	|-------	|------------------------	|---------------	|-------	|
-| PCA 50              	| 3      	| 0.01 	| 5     	| 5000 (did not converge 	| 0.9688        	| 10.9s 	|
+| PCA 50              	| 3      	| 0.01 	| 5     	| 5000 (did not converge) 	| 0.9688        	| 10.9s 	|
 | PCA 50              	| 3      	| 1    	| 10    	| 20000                  	| 0.9688        	| 12.8s 	|
 | PCA 100             	| 3      	| 0.01 	| 10    	| 20000                  	| 0.9749        	| 28.8s 	|
 | PCA 100             	| 3      	| 0.1  	| 10    	| 20000                  	| 0.9749        	| 33.1s 	|
@@ -111,13 +111,15 @@ The best hyperparameters to use tended to vary with the kernel. Within kernels, 
 ### PCA v. LDA: Analysis
 
 When examining PCA vs. LDA, it seems that PCA was able to consistently outperform LDA in most cases, despite taking a bit longer. While LDA may seem to be a desirable alternative for its efficiency, its inabibility to cross even the 90% threshold in most cases makes it difficult to recommend. It would be worth the extra time to let PCA run in order to achieve scores above 95% on some kernels. 
-This is likely attributed to the amount of 
+This is likely attributed to the number of dimensions 
 
 
 ### Kernel Comparisons (using PCA)
 
 When considering different kernels, we desire a high accuracy but not if the extra time or computational cost of training is not worth it. It may be more suitable to use a kernel that runs much faster and leave a few tenths or hundredths of a percent on the table. 
-With this in consideration, it may not be as suitable to use the RBF kernel given that the time required to train these models was on average notably higher than its linear or polynomial counterparts. For efficiency's sake, it may be preferable to consdider just the linear and polynomial kernels. The linear kernel was able to achieve an acceptable test accuracy without overfitting within a decent period of time. For higher accuracy, the polynomial kernel was able to achieve some results over 95%, but even with tweaking the hyperparameters. However, the polynomial kernel had a strong tendency to overfit. Part of this may have been due to my flawed intuition to start with a relatively high gamma (5 or 10) when I should have been dropping gamma by orders of magnitude. However, for higher degree kernels there was still an overfitting issue even with small gamma. 
+
+One of our members did test RBF, but was not super experimental with the parameters, initially about to recommend against it due to the high training cost compared to the other kernels. When viewing the data from the other group member, higher values of C with low values of gamma were employed, which provided great results. The linear kernel was able to achieve an acceptable test accuracy without overfitting within a decent period of time. For higher accuracy, the polynomial kernel was able to achieve some results over 95%, but even with tweaking the hyperparameters. However, initial testing with the polynomial kernel with specific parameter permutations revealed a tendency to overfit. Part of this may have been due to the first member's flawed intuition to start with a relatively high gamma (5 or 10) when I should have been dropping gamma by orders of magnitude. 
+With proper hyperparameters, however, each kernel was able to obtain respectable performance. 
 
 
 ### Overall conclusion
