@@ -28,7 +28,7 @@ The utility of these models will be based upon their ability to produce accurate
 ### General Model Training
 
 Results are presented in order of kernel. Hyperparameters were tuned and carried over to new PCA/LDA selections/kernels to serve as a baseline. 
-
+## MNIST
 #### Linear
 
 | Dim. Reduction Method 	| C     	| max_iter (default 1000) 	| Testing Score 	| Time  	|
@@ -100,6 +100,22 @@ Out of these models, several of the most accurate on the test data were selected
 | Linear PCA 200          	| 0.01 	|       	|      	| 1.2m  	|
 | Poly PCA 200 (Overfit)  	| 0.01 	| Any   	| 3    	| 2.0m  	|
 | RBF PCA 50              	| 0.1  	| 0.01  	|      	| 1.2m  	|
+
+## Fashion
+| SVC_kernal | Dim_reduction | C   | gamma | degree | train_score | test_score | iterations | time     |
+| ---------- | ------------- | --- | ----- | ------ | ----------- | ---------- | ---------- | -------- |
+| 'linear'   | PCA50         | 0.05 |   |        | 0.7711      | 0.7553     | 3000       | 33.28s  |
+| 'linear'   | PCA100        | 0.05 |   |        | 0.7966      | 0.7771     | 3000       | 56.08s  |
+| 'linear'   | PCA200        | 0.05 |   |       | 0.7853      | 0.7665     | 3000       | 103.02s |
+| 'linear'   | LDA           | 0.05 |   |       | 0.8436      | 0.8257     | 3000       | 27.99s  |
+| 'rbf'      | PCA50         | 2.0 | 0.005 |    | 0.93725 | 0.8802 | 3000 | 54.4010 |  
+| 'rbf'      | PCA100        | 2.0 | 0.005 |    | 0.959433 | 0.8854 | 3000 | 112.2138 | 
+| 'rbf'      | PCA200        | 2.0 | 0.005 |       | 0.9762      | 0.8863     | 3000       | 249.00s  |
+| 'rbf'      | LDA           | 2.0 | 0.005 |       | 0.8475      | 0.8285     | 3000       | 33.20s   |
+| 'poly'     | PCA50         | 5   | 0.0005 | 2      | 0.8686      | 0.8511     | 3000       | 37.75s  |
+| 'poly'     | PCA100        | 2   | scale  | 3      | 0.9074      | 0.8712     | 3000       | 59.64s  |
+| 'poly'     | PCA200        | 10  | 0.001  | 2      | 0.9278      | 0.8799     | 3000       | 101.44s |
+| 'poly'     | LDA           | 5   | 0.005  | 2      | 0.8396      | 0.8216     | 3000       | 21.71s  |
 
 There were others that had similar performance, but given that some of these iterations had a high `max_iter` value (even if a convergence warning printed), some models saw some overfitting. 
 
