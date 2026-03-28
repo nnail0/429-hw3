@@ -1,50 +1,41 @@
 #Task 4 : 8(x3 kernels) SVC Voters vs 1(x3 kernels) SVC
 from sklearn.model_selection import KFold
 from collections import Counter
+import numpy as np
 
 num_sets = 8
 
 # TODO divide MNIST into 8 disjoint sets using Kfold
-mnist_X_all = np.concatenate([X_train, X_test], axis=0) # merge test and train data
-mnist_Y_all = np.concatenate([Y_train, Y_test], axis=0)
-kf = KFold(n_splits=num_sets, shuffle=True, random_state=SEED) 
-
-mnist_batches = {"x_trains" : [],
-                 "y_trains" : [],
-                 "x_tests" : [],
-                 "y_tests" : []
-                }
-for train_index, test_index in kf.split(mnist_X_all):
-    mnist_batches["x_trains"].append(mnist_X_all[train_index])
-    mnist_batches["y_trains"].append(mnist_Y_all[train_index])
-    mnist_batches["x_tests"].append(mnist_X_all[test_index])
-    mnist_batches["y_tests"].append(mnist_Y_all[test_index])
+def split_8(data, seed):
+    X_train = data[0]
+    Y_train = data[1]
+    X_test = data[2]
+    Y_test = data[3]
     
-
-
-fashion_X_all = np.concatenate([X_train_f, X_test_f], axis=0)
-fashion_Y_all = np.concatenate([Y_train_f, Y_test_f], axis=0)
-kf_f = KFold(n_splits=num_sets, shuffle=True, random_state=SEED)
-
-fashion_batches = {"x_trains" : [],
-                   "y_trains" : [],
-                   "x_tests" : [],
-                   "y_tests" : []
-                  }
-
-
-for f_train_index, f_test_index in kf_f.split(fashion_X_all):
-    fashion_batches["x_trains"].append(fashion_X_all[f_train_index])
-    fashion_batches["y_trains"].append(fashion_Y_all[f_train_index])
-    fashion_batches["x_tests"].append(fashion_X_all[f_test_index])
-    fashion_batches["y_tests"].append(fashion_Y_all[f_test_index])
+    X_all = np.concatenate([X_train, X_test], axis=0) # merge test and train data
+    Y_all = np.concatenate([Y_train, Y_test], axis=0)
+    kf = KFold(n_splits=num_sets, shuffle=True, random_state=seed) 
     
+    batches = {"x_trains" : [],
+               "y_trains" : [],
+               "x_tests" : [],
+               "y_tests" : []
+               }
+    for train_index, test_index in kf.split(X_all):
+        batches["x_trains"].append(X_all[train_index])
+        batches["y_trains"].append(Y_all[train_index])
+        batches["x_tests"].append(X_all[test_index])
+        batches["y_tests"].append(Y_all[test_index])
+
+    return batches
+        
     
 # TODO final prediction result obtained by voting
 # take all y values and perform a majority vote for each sample. 
 # return an ndarray of the same length. 
 # training labels: 2D array
 # pass in "X_trains"
+'''
 def majority_vote(training_labels):
     results = []
     # 
@@ -59,10 +50,21 @@ def majority_vote(training_labels):
         results.append(result)
     
     return results
+    '''
+def majority_vote(labels_2d):
+    results = []
+
+    for row in labels_2d:
+        freq = Counter(row)
+        result = freq.most_common(1)[0][0]
+        results.append(result)
+
+    return np.array(results)
 
 # all_mnist_train_results = np.stack(mnist_batches["y_trains"], axis=1)
 # mnist_vote_result = majority_vote(all_mnist_train_results)
 
+'''
 n_iter = 20000
 
 p1 = Pipeline([("scaler", StandardScaler()), ("dim_red" , PCA(200)), ("model" , SVC(kernel='linear', C=0.001, max_iter=n_iter))], verbose=True)
@@ -82,3 +84,4 @@ def run_pipe(pipeline : Pipeline, train_x, train_y, test_x, test_y) -> list:
     print("test score: ", test_score)
     pipe_result = [test_score, time_taken]
     return pipe_result
+'''
